@@ -1,8 +1,5 @@
 package com.crm.qa.testcases;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -13,6 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
+
 public class FreeCrmTest {
 
 	static WebDriver driver;
@@ -20,7 +20,7 @@ public class FreeCrmTest {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "D:\\Intellij projects\\chromedriver 96\\chromedriver.exe");
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		driver.get("https://www.freecrm.com/index.html");

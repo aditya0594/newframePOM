@@ -1,14 +1,9 @@
 package com.crm.qa.pages;
 
-import java.util.Iterator;
-import java.util.Set;
-
-import org.openqa.selenium.JavascriptExecutor;
+import com.crm.qa.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
 	
@@ -46,7 +41,7 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath="//button[contains(text(),'Sign Up')]")
 	WebElement signUpBtn;
 	
-	@FindBy(xpath="//span[contains(@class,'header-logo__picture)]")
+	@FindBy(xpath="//span[contains(@class,'header-logo__picture')]")
 	WebElement crmLogo;
 	
 	@FindBy(xpath="//*[@id=\"crm_control_panel_menu_menu_crm_deal\"]/a[1]")
@@ -103,6 +98,7 @@ public class LoginPage extends TestBase{
 		driver.switchTo().window(parentHandle);
 		accB24.click();
 		accB24Link.click();
+
 		//ShatterPopup.click();
 		//Thread.sleep(2000);
 		

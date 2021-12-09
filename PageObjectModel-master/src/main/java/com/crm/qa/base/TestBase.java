@@ -1,28 +1,18 @@
 package com.crm.qa.base;
 
+import com.crm.qa.util.TestUtil;
+import com.crm.qa.util.WebEventListener;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.crm.qa.util.TestUtil;
-import com.crm.qa.util.WebEventListener;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
@@ -54,7 +44,7 @@ public class TestBase {
 		
 		if(browserName.equals("chrome")){
 			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", "D:\\Intellij projects\\chromedriver 96\\chromedriver.exe");
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
@@ -63,7 +53,7 @@ public class TestBase {
 		}
 		else if(browserName.equals("CO")){
 			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedata\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\Intellij projects\\chromedriver 96\\chromedriver.exe");
 			ChromeOptions opt = new ChromeOptions();
 			opt.setExperimentalOption("debuggerAddress","localhost:9222");
 			driver = new ChromeDriver(opt);

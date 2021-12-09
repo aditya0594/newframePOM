@@ -17,7 +17,7 @@ public class LoginPageTest extends TestBase{
 	//contructor 
 	//super keyword , we have to call the testbase class constructor that is properties we using for the initialization 
 	//complusary to call the using super keyword we are calling the super class contructor ie Testbase 
-	public LoginPageTest(){
+	public LoginPageTest() {
 		super();
 	}
 	
@@ -43,6 +43,7 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=2)
 	public void loginTest() throws Exception{
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+
 	}
 	
 	@Test(priority=3)
@@ -57,9 +58,5 @@ public class LoginPageTest extends TestBase{
 	public void tearDown(){
 		driver.quit();
 	}
-	
-	
-	
-	
 
 }
